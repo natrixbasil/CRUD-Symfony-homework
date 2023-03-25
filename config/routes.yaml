@@ -1,0 +1,31 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+get_things:
+    path: '/thing'
+    controller: App\Controller\Thing\ThingGetCollectionController::Get
+    methods: ['GET']
+
+get_thing:
+    path: '/thing/{id}'
+    controller: App\Controller\Thing\ThingGetItemController::Get
+    methods: ['GET']
+
+
+put_thing:
+    path: '/thing/{id}'
+    controller: App\Controller\Thing\ThingPutController::Put
+    methods: ['PUT']
+
+patch_thing:
+    path: '/thing/{id}'
+    controller: App\Controller\Thing\ThingPatchController::Patch
+    methods: ['PATCH']
+
+delete_thing:
+    path: '/thing/{id}'
+    controller: App\Controller\Thing\ThingDeleteController::Delete
+    methods: ['DELETE']
